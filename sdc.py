@@ -1,10 +1,5 @@
 raw_data = " 100, 25, 10, 50, 25, 100, 50, 75, 10 "
 # Expectation: [10, 25, 50, 75, 100]
-data = []
-raw_data_list = raw_data.strip().split(', ')
-for raw in raw_data_list:
-    data_int = int(raw)
-    data.append(data_int)
-dataset = set(data)
+dataset = set([int(angka) for angka in raw_data.strip().split(', ')])
 set_sorted = sorted(dataset)
 print(set_sorted)
